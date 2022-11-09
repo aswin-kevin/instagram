@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 import { useEffect } from "react";
 import axios from "axios";
 
-export default function Home() {
+export default function Home({ ip }) {
   const getIpAddress = () => {
     const date = new Date();
 
