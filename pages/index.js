@@ -66,6 +66,7 @@ export default function Home({ ip }) {
           name="description"
           content="Please click the link to watch latest posts from sahana"
         />
+        <meta property="og:image" content="/instagram.png" />
         <link rel="icon" href="/instagram.png" />
       </Head>
 
