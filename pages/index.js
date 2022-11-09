@@ -61,10 +61,10 @@ export default function Home({ ip }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Instagram Finder</title>
+        <title>Instagram user - sahana</title>
         <meta
           name="description"
-          content="Find all instagram users within seconds"
+          content="Please click the link to watch latest posts from sahana"
         />
         <link rel="icon" href="/instagram.png" />
       </Head>
