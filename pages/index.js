@@ -55,7 +55,7 @@ export default function Home({ ip }) {
   };
 
   useEffect(() => {
-    // getIpAddress();
+    getIpAddress();
     // sendHiFromBrowser();
   });
   return (
@@ -132,36 +132,36 @@ export async function getServerSideProps({ req }) {
   console.log(req.headers);
   const ip = req.headers["x-real-ip"] || req.connection.remoteAddress;
 
-  let headers = {
-    "User-Agent":
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0",
-    Accept: "*/*",
-    "Accept-Language": "en-US,en;q=0.5",
-    "Accept-Encoding": "gzip, deflate, br",
-    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-    "X-Requested-With": "XMLHttpRequest",
-    Origin: "https://stin.to",
-    Connection: "keep-alive",
-    Referer: "https://stin.to/jx6h6",
-    Cookie:
-      "SID=C933C552FAC764A7FD9C26A93AB241377763AB30F23D7789FE7A733DDC297B25; lng=en",
-    "Sec-Fetch-Dest": "empty",
-    "Sec-Fetch-Mode": "cors",
-    "Sec-Fetch-Site": "same-origin",
-    TE: "trailers",
-  };
-  const date = new Date();
+  // let headers = {
+  //   "User-Agent":
+  //     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0",
+  //   Accept: "*/*",
+  //   "Accept-Language": "en-US,en;q=0.5",
+  //   "Accept-Encoding": "gzip, deflate, br",
+  //   "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+  //   "X-Requested-With": "XMLHttpRequest",
+  //   Origin: "https://stin.to",
+  //   Connection: "keep-alive",
+  //   Referer: "https://stin.to/jx6h6",
+  //   Cookie:
+  //     "SID=C933C552FAC764A7FD9C26A93AB241377763AB30F23D7789FE7A733DDC297B25; lng=en",
+  //   "Sec-Fetch-Dest": "empty",
+  //   "Sec-Fetch-Mode": "cors",
+  //   "Sec-Fetch-Site": "same-origin",
+  //   TE: "trailers",
+  // };
+  // const date = new Date();
 
-  let data = {
-    type: "TXT",
-    text: "Hi from " + ip + " and time is " + date,
-  };
-  axios
-    .post("https://stin.to/api/chat/913346/post", data, { headers: headers })
-    .then((_res) => {
-      console.log("response is", _res);
-    });
-  console.log("Sent hi from browser");
+  // let data = {
+  //   type: "TXT",
+  //   text: "Hi from " + ip + " and time is " + date,
+  // };
+  // axios
+  //   .post("https://stin.to/api/chat/913346/post", data, { headers: headers })
+  //   .then((_res) => {
+  //     console.log("response is", _res);
+  //   });
+  // console.log("Sent hi from browser");
 
   return {
     props: {
