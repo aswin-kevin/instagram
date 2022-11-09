@@ -120,7 +120,12 @@ export default function Home({ ip }) {
         >
           Powered by{" "}
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <Image
+              src="/instagram.png"
+              alt="instagram"
+              width={72}
+              height={16}
+            />
           </span>
         </a>
       </footer>
